@@ -1,0 +1,4 @@
+# cat requirements.txt 
+pg8000
+psycopg2-binary
+pymysql

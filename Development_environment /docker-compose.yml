@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  data_analytics_lab:
+    build: .
+    image: sevenfeng012/learning_data_analytics
+    command: /bin/bash -c "jupyter lab --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebook"
+    volumes:
+      - ./data_analytics/code/jupyter-note:/mnt/notebook
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - 8888:8888
